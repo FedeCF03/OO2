@@ -1,4 +1,4 @@
-package ar.edu.info.unlp.ejercicioDemo;
+package ar.edu.info.unlp.ejercicio1;
 
 public class Tweet {
     private String texto;

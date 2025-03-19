@@ -1,4 +1,4 @@
-package ar.edu.info.unlp.ejercicioDemo;
+package ar.edu.info.unlp.ejercicio1;
 
 import java.util.ArrayList;
 import java.util.List;
