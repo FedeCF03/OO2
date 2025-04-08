@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: ar.edu.unlp.info.oo2.biblioteca.BibliotecaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.06 s <<< FAILURE! - in ar.edu.unlp.info.oo2.biblioteca.BibliotecaTest
+testBiblio  Time elapsed: 0.054 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Invalid character constant
+
+	at ar.edu.unlp.info.oo2.biblioteca.BibliotecaTest.testBiblio(BibliotecaTest.java:13)
+
