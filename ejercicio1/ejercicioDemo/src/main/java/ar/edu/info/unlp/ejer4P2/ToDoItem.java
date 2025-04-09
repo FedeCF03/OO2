@@ -17,6 +17,10 @@ public class ToDoItem {
      * Instancia un ToDoItem nuevo en estado pending con <name> como nombre.
      */
     public ToDoItem(String name) {
+        this.name = name;
+        this.state = new Pending();
+        this.inic = null;
+        this.finishedTime = null;
     };
 
     /**
@@ -80,5 +84,13 @@ public class ToDoItem {
 
     public Temporal getfinishedTime() {
         return this.finishedTime;
+    }
+
+    public State getState() {
+        return this.state;
+    }
+
+    public List<String> getComments() {
+        return this.comments;
     }
 }
