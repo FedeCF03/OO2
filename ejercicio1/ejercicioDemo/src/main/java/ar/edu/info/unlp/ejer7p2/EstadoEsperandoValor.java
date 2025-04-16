@@ -4,12 +4,13 @@ public class EstadoEsperandoValor implements Estado {
 
     @Override
     public double getResultado(Calculadora calculadora) {
-        throw new IllegalStateException("Error: No se puede establecer un valor .");
+        calculadora.setEstado(new EstadoError());
+        throw new IllegalStateException("Error: No se puede calcular el resultado .");
     }
 
     @Override
     public void borrar(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.borrarTodo();
     }
 
     @Override
@@ -19,21 +20,26 @@ public class EstadoEsperandoValor implements Estado {
 
     @Override
     public void menos(Calculadora calculadora) {
+        calculadora.setEstado(new EstadoError());
         throw new UnsupportedOperationException("Not supported yet.");
+
     }
 
     @Override
     public void por(Calculadora calculadora) {
+        calculadora.setEstado(new EstadoError());
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void dividido(Calculadora calculadora) {
+        calculadora.setEstado(new EstadoError());
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void mas(Calculadora calculadora) {
+        calculadora.setEstado(new EstadoError());
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

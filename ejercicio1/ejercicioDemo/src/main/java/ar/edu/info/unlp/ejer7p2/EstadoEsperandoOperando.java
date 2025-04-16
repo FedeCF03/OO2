@@ -4,12 +4,12 @@ public class EstadoEsperandoOperando implements Estado {
 
     @Override
     public double getResultado(Calculadora calculadora) {
-        return calculadora.getResultado();
+        return calculadora.calcularResultado();
     }
 
     @Override
     public void borrar(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.borrarTodo();
     }
 
     @Override
@@ -19,22 +19,26 @@ public class EstadoEsperandoOperando implements Estado {
 
     @Override
     public void menos(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.setOperacionStrategy(new RestaStrategy());
+        calculadora.setEstado(new EstadoEsperandoValor());
     }
 
     @Override
     public void por(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.setOperacionStrategy(new PorStrategy());
+        calculadora.setEstado(new EstadoEsperandoValor());
     }
 
     @Override
     public void dividido(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.setOperacionStrategy(new DividirStrategy());
+        calculadora.setEstado(new EstadoEsperandoValor());
     }
 
     @Override
     public void mas(Calculadora calculadora) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        calculadora.setOperacionStrategy(new SumaStrategy());
+        calculadora.setEstado(new EstadoEsperandoValor());
     }
 
 }

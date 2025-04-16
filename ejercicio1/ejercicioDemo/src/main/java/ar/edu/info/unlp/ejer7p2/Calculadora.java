@@ -16,15 +16,19 @@ public class Calculadora {
     };
 
     public void menos() {
+        estado.menos(this);
     };
 
     public void por() {
+        estado.por(this);
     };
 
     public void dividido() {
+        estado.dividido(this);
     };
 
     public void mas() {
+        estado.mas(this);
     };
 
     public void setValor(Double valor) {
@@ -37,7 +41,7 @@ public class Calculadora {
 
     };
 
-    private double calcularResultado() {
+    protected double calcularResultado() {
         return this.operacionStrategy.getResultado(this.valor1, this.valor2);
     };
 
@@ -48,4 +52,12 @@ public class Calculadora {
     public void setEstado(Estado estado) {
         this.estado = estado;
     };
+
+    public void borrarTodo() {
+        this.setEstado(new EstadoEsperandoValor());
+        valorUnoIngresado = false;
+        this.valor1 = 0.0;
+        this.valor2 = 0.0;
+        this.setOperacionStrategy(null);
+    }
 }

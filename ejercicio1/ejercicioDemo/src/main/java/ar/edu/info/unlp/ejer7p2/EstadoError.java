@@ -9,9 +9,8 @@ public class EstadoError implements Estado {
 
     @Override
     public void borrar(Calculadora calculadora) {
-        calculadora.setEstado(new EstadoEsperandoValor());
-        calculadora.setValor(0.0);
-        calculadora.setOperacionStrategy(null);
+        calculadora.borrarTodo();
+
     }
 
     @Override
